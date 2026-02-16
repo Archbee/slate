@@ -4,15 +4,17 @@ The core `Editor` ships with a bunch of built-in commands that provide common be
 
 ## Current Selection Commands
 
-These commands act on the `document` based on the current `selection`. They are equivalent to calling the [Document Range Commands](#document-range-commands) with the current selection as the `range` argument, but they are there for convenience, since you often want to act with the current selection, as a user would.
+These commands act on the `document` based on the current `selection`. They are equivalent to calling the [**Document Range Commands**](./#document-range-commands) with the current selection as the `range` argument, but they are there for convenience, since you often want to act with the current selection, as a user would.
 
 ### `addMark`
 
-`addMark(mark: Mark) => Editor` <br/>
-`addMark(properties: Object) => Editor` <br/>
+`addMark(mark: Mark) => Editor`&#x20;
+
+`addMark(properties: Object) => Editor`&#x20;
+
 `addMark(type: String) => Editor`
 
-Add a [`Mark`](./mark.md) to the characters in the current selection. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Add a [**Mark**](./mark.md) to the characters in the current selection. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `delete`
 
@@ -22,8 +24,10 @@ Delete everything in the current selection.
 
 ### `insertBlock`
 
-`insertBlock(block: Block) => Editor` <br/>
-`insertBlock(properties: Object) => Editor` <br/>
+`insertBlock(block: Block) => Editor`&#x20;
+
+`insertBlock(properties: Object) => Editor`&#x20;
+
 `insertBlock(type: String) => Editor`
 
 Insert a new block at the same level as the current block, splitting the current block to make room if it is non-empty. If the selection is expanded, it will be deleted first.
@@ -32,23 +36,24 @@ Insert a new block at the same level as the current block, splitting the current
 
 `deleteBackward(n: Number) => Editor`
 
-Delete backward `n` characters at the current cursor. If the selection is expanded, this method is equivalent to a regular [`delete()`](#delete). `n` defaults to `1`.
+Delete backward `n` characters at the current cursor. If the selection is expanded, this method is equivalent to a regular [**delete()**](./#delete). `n` defaults to `1`.
 
 ### `deleteForward`
 
 `deleteForward(n: Number) => Editor`
 
-Delete forward `n` characters at the current cursor. If the selection is expanded, this method is equivalent to a regular [`delete()`](#delete). `n` defaults to `1`.
+Delete forward `n` characters at the current cursor. If the selection is expanded, this method is equivalent to a regular [**delete()**](./#delete). `n` defaults to `1`.
 
 ### `insertFragment`
 
 `insertFragment(fragment: Document) => Editor`
 
-Insert a [`fragment`](./document.md) at the current selection. If the selection is expanded, it will be deleted first.
+Insert a [**fragment**](./document.md) at the current selection. If the selection is expanded, it will be deleted first.
 
 ### `insertInline`
 
-`insertInline(inline: Inline) => Editor` <br/>
+`insertInline(inline: Inline) => Editor`&#x20;
+
 `insertInline(properties: Object) => Editor`
 
 Insert a new inline at the current cursor position, splitting the text to make room if it is non-empty. If the selection is expanded, it will be deleted first.
@@ -61,81 +66,97 @@ Insert a string of `text` at the current selection. If the selection is expanded
 
 ### `setBlocks`
 
-`setBlocks(properties: Object) => Editor` <br/>
+`setBlocks(properties: Object) => Editor`&#x20;
+
 `setBlocks(type: String) => Editor`
 
-Set the `properties` of the [`Blocks`](./block.md) in the current selection. For convenience, you can pass a `type` string to set the blocks' type only.
+Set the `properties` of the [**Blocks**](./block.md) in the current selection. For convenience, you can pass a `type` string to set the blocks' type only.
 
 ### `setInlines`
 
-`setInlines(properties: Object) => Editor` <br/>
+`setInlines(properties: Object) => Editor`&#x20;
+
 `setInlines(type: String) => Editor`
 
-Set the `properties` of the [`Inlines`](./inline.md) nodes in the current selection. For convenience, you can pass a `type` string to set the inline nodes' type only.
+Set the `properties` of the [**Inlines**](./inline.md) nodes in the current selection. For convenience, you can pass a `type` string to set the inline nodes' type only.
 
 ### `splitBlock`
 
 `splitBlock(depth: Number) => Editor`
 
-Split the [`Block`](./block.md) in the current selection by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `1`.
+Split the [**Block**](./block.md) in the current selection by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `1`.
 
 ### `splitInline`
 
 `splitInline(depth: Number) => Editor`
 
-Split the [`Inline`](./inline.md) node in the current selection by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `Infinity`.
+Split the [**Inline**](./inline.md) node in the current selection by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `Infinity`.
 
 ### `removeMark`
 
-`removeMark(mark: Mark) => Editor` <br/>
-`removeMark(properties: Object) => Editor` <br/>
+`removeMark(mark: Mark) => Editor`&#x20;
+
+`removeMark(properties: Object) => Editor`&#x20;
+
 `removeMark(type: String) => Editor`
 
-Remove a [`Mark`](./mark.md) from the characters in the current selection. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Remove a [**Mark**](./mark.md) from the characters in the current selection. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `replaceMark`
 
-`replaceMark(oldMark: Mark, newMark: Mark) => Editor` <br/>
-`replaceMark(oldProperties: Object, newProperties: Object) => Editor` <br/>
+`replaceMark(oldMark: Mark, newMark: Mark) => Editor`&#x20;
+
+`replaceMark(oldProperties: Object, newProperties: Object) => Editor`&#x20;
+
 `replaceMark(oldType: String, newType: String) => Editor`
 
-Replace a [`Mark`](./mark.md) in the characters in the current selection. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Replace a [**Mark**](./mark.md) in the characters in the current selection. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `toggleMark`
 
-`toggleMark(mark: Mark) => Editor` <br/>
-`toggleMark(properties: Object) => Editor` <br/>
+`toggleMark(mark: Mark) => Editor`&#x20;
+
+`toggleMark(properties: Object) => Editor`&#x20;
+
 `toggleMark(type: String) => Editor`
 
-Add or remove a [`Mark`](./mark.md) from the characters in the current selection, depending on it already exists on any or not. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Add or remove a [**Mark**](./mark.md) from the characters in the current selection, depending on it already exists on any or not. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `unwrapBlock`
 
-`unwrapBlock(type: String) => Editor` <br/>
-`unwrapBlock(properties: Object) => Editor` <br />
+`unwrapBlock(type: String) => Editor`&#x20;
 
-Unwrap all [`Block`](./block.md) nodes in the current selection that match a `type` and/or `data`.
+`unwrapBlock(properties: Object) => Editor`&#x20;
+
+
+Unwrap all [**Block**](./block.md) nodes in the current selection that match a `type` and/or `data`.
 
 ### `unwrapInline`
 
-`unwrapInline(type: String) => Editor` <br/>
-`unwrapInline(properties: Object) => Editor` <br/>
+`unwrapInline(type: String) => Editor`&#x20;
 
-Unwrap all [`Inline`](./inline.md) nodes in the current selection that match a `type` and/or `data`.
+`unwrapInline(properties: Object) => Editor`&#x20;
+
+
+Unwrap all [**Inline**](./inline.md) nodes in the current selection that match a `type` and/or `data`.
 
 ### `wrapBlock`
 
-`wrapBlock(type: String) => Editor` <br/>
-`wrapBlock(properties: Object) => Editor` <br/>
+`wrapBlock(type: String) => Editor`&#x20;
 
-Wrap the [`Block`](./block.md) nodes in the current selection with a new [`Block`](./block.md) node of `type`, with optional `data`.
+`wrapBlock(properties: Object) => Editor`&#x20;
+
+
+Wrap the [**Block**](./block.md) nodes in the current selection with a new [**Block**](./block.md) node of `type`, with optional `data`.
 
 ### `wrapInline`
 
-`wrapInline(type: String) => Editor` <br />
-`wrapInline(properties: Object) => Editor` <br />
+`wrapInline(type: String) => Editor`&#x20;
 
-Wrap the [`Inline`](./inline.md) nodes in the current selection with a new [`Inline`](./inline.md) node of `type`, with optional `data`.
+`wrapInline(properties: Object) => Editor`&#x20;
+
+
+Wrap the [**Inline**](./inline.md) nodes in the current selection with a new [**Inline**](./inline.md) node of `type`, with optional `data`.
 
 ### `wrapText`
 
@@ -261,19 +282,21 @@ Move the current selection's anchor point to the start of the document and its f
 
 `select(properties: Range || Object) => Editor`
 
-Set the current selection to a range with merged `properties`. The `properties` can either be a [`Range`](./range.md) object or a plain JavaScript object of selection properties.
+Set the current selection to a range with merged `properties`. The `properties` can either be a [**Range**](./range.md) object or a plain JavaScript object of selection properties.
 
 ## Document Range Commands
 
-These commands act on a specific [`Range`](./range.md) of the document.
+These commands act on a specific [**Range**](./range.md) of the document.
 
 ### `addMarkAtRange`
 
-`addMarkAtRange(range: Range, mark: Mark) => Editor` <br/>
-`addMarkAtRange(range: Range, properties: Object) => Editor` <br/>
+`addMarkAtRange(range: Range, mark: Mark) => Editor`&#x20;
+
+`addMarkAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `addMarkAtRange(range: Range, type: String) => Editor`
 
-Add a [`Mark`](./mark.md) to the characters in a `range`. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Add a [**Mark**](./mark.md) to the characters in a `range`. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `deleteAtRange`
 
@@ -285,18 +308,20 @@ Delete everything in a `range`.
 
 `deleteBackwardAtRange(range: Range, n: Number) => Editor`
 
-Delete backward `n` characters at a `range`. If the `range` is expanded, this method is equivalent to a regular [`delete()`](#delete). `n` defaults to `1`.
+Delete backward `n` characters at a `range`. If the `range` is expanded, this method is equivalent to a regular [**delete()**](./#delete). `n` defaults to `1`.
 
 ### `deleteForwardAtRange`
 
 `deleteForwardAtRange(range: Range, n: Number) => Editor`
 
-Delete forward `n` characters at a `range`. If the `range` is expanded, this method is equivalent to a regular [`delete()`](#delete). `n` defaults to `1`.
+Delete forward `n` characters at a `range`. If the `range` is expanded, this method is equivalent to a regular [**delete()**](./#delete). `n` defaults to `1`.
 
 ### `insertBlockAtRange`
 
-`insertBlockAtRange(range: Range, block: Block) => Editor` <br/>
-`insertBlockAtRange(range: Range, properties: Object) => Editor` <br/>
+`insertBlockAtRange(range: Range, block: Block) => Editor`&#x20;
+
+`insertBlockAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `insertBlockAtRange(range: Range, type: String) => Editor`
 
 Insert a new block at the same level as the leaf block at a `range`, splitting the current block to make room if it is non-empty. If the selection is expanded, it will be deleted first.
@@ -305,11 +330,12 @@ Insert a new block at the same level as the leaf block at a `range`, splitting t
 
 `insertFragmentAtRange(range: Range, fragment: Document) => Editor`
 
-Insert a [`fragment`](./document.md) at a `range`. If the selection is expanded, it will be deleted first.
+Insert a [**fragment**](./document.md) at a `range`. If the selection is expanded, it will be deleted first.
 
 ### `insertInlineAtRange`
 
-`insertInlineAtRange(range: Range, inline: Inline) => Editor` <br/>
+`insertInlineAtRange(range: Range, inline: Inline) => Editor`&#x20;
+
 `insertInlineAtRange(range: Range, properties: Object) => Editor`
 
 Insert a new inline at a `range`, splitting the text to make room if it is non-empty. If the selection is expanded, it will be deleted first.
@@ -322,73 +348,83 @@ Insert a string of `text` at a `range`. If the selection is expanded, it will be
 
 ### `setBlocksAtRange`
 
-`setBlocksAtRange(range: Range, properties: Object) => Editor` <br/>
+`setBlocksAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `setBlocks(range: Range, type: String) => Editor`
 
-Set the `properties` of the [`Blocks`](./block.md) in a `range`. For convenience, you can pass a `type` string to set the blocks' type only.
+Set the `properties` of the [**Blocks**](./block.md) in a `range`. For convenience, you can pass a `type` string to set the blocks' type only.
 
 ### `setInlinesAtRange`
 
-`setInlinesAtRange(range: Range, properties: Object) => Editor` <br/>
+`setInlinesAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `setInlines(range: Range, type: String) => Editor`
 
-Set the `properties` of the [`Inlines`](./inline.md) nodes in a `range`. For convenience, you can pass a `type` string to set the inline nodes' type only.
+Set the `properties` of the [**Inlines**](./inline.md) nodes in a `range`. For convenience, you can pass a `type` string to set the inline nodes' type only.
 
 ### `splitBlockAtRange`
 
 `splitBlockAtRange(range: Range, depth: Number) => Editor`
 
-Split the [`Block`](./block.md) in a `range` by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `1`.
+Split the [**Block**](./block.md) in a `range` by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `1`.
 
 ### `splitInlineAtRange`
 
 `splitInlineAtRange(range: Range, depth: Number) => Editor`
 
-Split the [`Inline`](./inline.md) node in a `range` by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `Infinity`.
+Split the [**Inline**](./inline.md) node in a `range` by `depth` levels. If the selection is expanded, it will be deleted first. `depth` defaults to `Infinity`.
 
 ### `removeMarkAtRange`
 
-`removeMarkAtRange(range: Range, mark: Mark) => Editor` <br/>
-`removeMarkAtRange(range: Range, properties: Object) => Editor` <br/>
+`removeMarkAtRange(range: Range, mark: Mark) => Editor`&#x20;
+
+`removeMarkAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `removeMarkAtRange(range: Range, type: String) => Editor`
 
-Remove a [`Mark`](./mark.md) from the characters in a `range`. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Remove a [**Mark**](./mark.md) from the characters in a `range`. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `toggleMarkAtRange`
 
-`toggleMarkAtRange(range: Range, mark: Mark) => Editor` <br/>
-`toggleMarkAtRange(range: Range, properties: Object) => Editor` <br/>
+`toggleMarkAtRange(range: Range, mark: Mark) => Editor`&#x20;
+
+`toggleMarkAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `toggleMarkAtRange(range: Range, type: String) => Editor`
 
-Add or remove a [`Mark`](./mark.md) from the characters in a `range`, depending on whether any of them already have the mark. For convenience, you can pass a `type` string or `properties` object to implicitly create a [`Mark`](./mark.md) of that type.
+Add or remove a [**Mark**](./mark.md) from the characters in a `range`, depending on whether any of them already have the mark. For convenience, you can pass a `type` string or `properties` object to implicitly create a [**Mark**](./mark.md) of that type.
 
 ### `unwrapBlockAtRange`
 
-`unwrapBlockAtRange(range: Range, properties: Object) => Editor` <br/>
+`unwrapBlockAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `unwrapBlockAtRange(range: Range, type: String) => Editor`
 
-Unwrap all [`Block`](./block.md) nodes in a `range` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
+Unwrap all [**Block**](./block.md) nodes in a `range` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `unwrapInlineAtRange`
 
-`unwrapInlineAtRange(range: Range, properties: Object) => Editor` <br/>
+`unwrapInlineAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `unwrapInlineAtRange(range: Range, type: String) => Editor`
 
-Unwrap all [`Inline`](./inline.md) nodes in a `range` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
+Unwrap all [**Inline**](./inline.md) nodes in a `range` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `wrapBlockAtRange`
 
-`wrapBlockAtRange(range: Range, properties: Object) => Editor` <br/>
+`wrapBlockAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `wrapBlockAtRange(range: Range, type: String) => Editor`
 
-Wrap the [`Block`](./block.md) nodes in a `range` with a new [`Block`](./block.md) node with `properties`. For convenience, you can pass a `type` string or `properties` object.
+Wrap the [**Block**](./block.md) nodes in a `range` with a new [**Block**](./block.md) node with `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `wrapInlineAtRange`
 
-`wrapInlineAtRange(range: Range, properties: Object) => Editor` <br/>
+`wrapInlineAtRange(range: Range, properties: Object) => Editor`&#x20;
+
 `wrapInlineAtRange(range: Range, type: String) => Editor`
 
-Wrap the [`Inline`](./inline.md) nodes in a `range` with a new [`Inline`](./inline.md) node with `properties`. For convenience, you can pass a `type` string or `properties` object.
+Wrap the [**Inline**](./inline.md) nodes in a `range` with a new [**Inline**](./inline.md) node with `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `wrapTextAtRange`
 
@@ -405,86 +441,88 @@ These commands are lower-level, and act on a specific node by its `key` or `path
 `addMarkByKey(key: String, offset: Number, length: Number, mark: Mark) => Editor`
 `addMarkByPath(path: List, offset: Number, length: Number, mark: Mark) => Editor`
 
-Add a `mark` to `length` characters starting at an `offset` in a [`Node`](./node.md) by its `key` or `path`.
+Add a `mark` to `length` characters starting at an `offset` in a [**Node**](./node.md) by its `key` or `path`.
 
 ### `insertNodeByKey/Path`
 
 `insertNodeByKey(key: String, index: Number, node: Node) => Editor`
 `insertNodeByPath(path: List, index: Number, node: Node) => Editor`
 
-Insert a `node` at `index` inside a parent [`Node`](./node.md) by its `key` or `path`.
+Insert a `node` at `index` inside a parent [**Node**](./node.md) by its `key` or `path`.
 
 ### `insertFragmentByKey/Path`
 
 `insertFragmentByKey(key: String, index: Number, fragment: Fragment) => Transform`
 `insertFragmentByPath(path: list, index: Number, fragment: Fragment) => Transform`
 
-Insert a [`Fragment`](./fragment.md) at `index` inside a parent [`Node`](./node.md) by its `key` or `path`.
+Insert a [`Fragment`]() at `index` inside a parent [**Node**](./node.md) by its `key` or `path`.
 
 ### `insertTextByKey/Path`
 
 `insertTextByKey(key: String, offset: Number, text: String, [marks: Set]) => Editor`
 `insertTextByPath(path: List, offset: Number, text: String, [marks: Set]) => Editor`
 
-Insert `text` at an `offset` in a [`Text Node`](./text.md) by its `key` with optional `marks`.
+Insert `text` at an `offset` in a [**Text Node**](./text.md) by its `key` with optional `marks`.
 
 ### `mergeNodeByKey/Path`
 
 `mergeNodeByKey(key: String) => Editor`
 `mergeNodeByPath(path: List) => Editor`
 
-Merge a [`Node`](./node.md) by its `key` or `path` with its previous sibling.
+Merge a [**Node**](./node.md) by its `key` or `path` with its previous sibling.
 
 ### `moveNodeByKey/Path`
 
 `moveNodeByKey(key: String, newKey: String, newIndex: Number) => Editor`
 `moveNodeByPath(path: List, newKey: String, newIndex: Number) => Editor`
 
-Move a [`Node`](./node.md) by its `key` or `path` to a new parent node with its `newKey` and at a `newIndex`.
+Move a [**Node**](./node.md) by its `key` or `path` to a new parent node with its `newKey` and at a `newIndex`.
 
 ### `removeMarkByKey/Path`
 
 `removeMarkByKey(key: String, offset: Number, length: Number, mark: Mark) => Editor`
 `removeMarkByPath(path: List, offset: Number, length: Number, mark: Mark) => Editor`
 
-Remove a `mark` from `length` characters starting at an `offset` in a [`Node`](./node.md) by its `key` or `path`.
+Remove a `mark` from `length` characters starting at an `offset` in a [**Node**](./node.md) by its `key` or `path`.
 
 ### `removeNodeByKey/Path`
 
 `removeNodeByKey(key: String) => Editor`
 `removeNodeByPath(path: List) => Editor`
 
-Remove a [`Node`](./node.md) from the document by its `key` or `path`.
+Remove a [**Node**](./node.md) from the document by its `key` or `path`.
 
 ### `replaceNodeByKey/Path`
 
 `replaceNodeByKey(key: String, node: Node) => Editor`
 `replaceNodeByPath(path: List, node: Node) => Editor`
 
-Replace a [`Node`](./node.md) in the document with a new [`Node`](./node.md) by its `key` or `path`.
+Replace a [**Node**](./node.md) in the document with a new [**Node**](./node.md) by its `key` or `path`.
 
 ### `removeTextByKey/Path`
 
 `removeTextByKey(key: String, offset: Number, length: Number) => Editor`
 `removeTextByPath(path: List, offset: Number, length: Number) => Editor`
 
-Remove `length` characters of text starting at an `offset` in a [`Node`](./node.md) by its `key` or `path`.
+Remove `length` characters of text starting at an `offset` in a [**Node**](./node.md) by its `key` or `path`.
 
 ### `setMarkByKey/Path`
 
 `setMarkByKey(key: String, offset: Number, length: Number, properties: Object, newProperties: Object) => Editor`
 `setMarkByPath(path: List, offset: Number, length: Number, properties: Object, newProperties: Object) => Editor`
 
-Set a dictionary of `newProperties` on a [`Mark`](./mark.md) on a [`Node`](./node.md) by its `key` or `path`.
+Set a dictionary of `newProperties` on a [**Mark**](./mark.md) on a [**Node**](./node.md) by its `key` or `path`.
 
 ### `setNodeByKey/Path`
 
-`setNodeByKey(key: String, properties: Object) => Editor` <br/>
+`setNodeByKey(key: String, properties: Object) => Editor`&#x20;
+
 `setNodeByKey(key: String, type: String) => Editor`
-`setNodeByPath(path: List, properties: Object) => Editor` <br/>
+`setNodeByPath(path: List, properties: Object) => Editor`&#x20;
+
 `setNodeByPath(path: List, type: String) => Editor`
 
-Set a dictionary of `properties` on a [`Node`](./node.md) by its `key` or `path`. For convenience, you can pass a `type` string or `properties` object.
+Set a dictionary of `properties` on a [**Node**](./node.md) by its `key` or `path`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `splitNodeByKey/Path`
 
@@ -495,21 +533,25 @@ Split a node by its `key` or `path` at an `offset`.
 
 ### `unwrapInlineByKey/Path`
 
-`unwrapInlineByKey(key: String, properties: Object) => Editor` <br/>
+`unwrapInlineByKey(key: String, properties: Object) => Editor`&#x20;
+
 `unwrapInlineByKey(key: String, type: String) => Editor`
-`unwrapInlineByPath(path: List, properties: Object) => Editor` <br/>
+`unwrapInlineByPath(path: List, properties: Object) => Editor`&#x20;
+
 `unwrapInlineByPath(path: List, type: String) => Editor`
 
-Unwrap all inner content of an [`Inline`](./inline.md) node by its `key` or `path` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
+Unwrap all inner content of an [**Inline**](./inline.md) node by its `key` or `path` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `unwrapBlockByKey/Path`
 
-`unwrapBlockByKey(key: String, properties: Object) => Editor` <br/>
+`unwrapBlockByKey(key: String, properties: Object) => Editor`&#x20;
+
 `unwrapBlockByKey(key: String, type: String) => Editor`
-`unwrapBlockByPath(path: List, properties: Object) => Editor` <br/>
+`unwrapBlockByPath(path: List, properties: Object) => Editor`&#x20;
+
 `unwrapBlockByPath(path: List, type: String) => Editor`
 
-Unwrap all inner content of a [`Block`](./block.md) node by its `key` or `path` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
+Unwrap all inner content of a [**Block**](./block.md) node by its `key` or `path` that match `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `unwrapNodeByKey/Path`
 
@@ -520,28 +562,34 @@ Unwrap a single node from its parent. If the node is surrounded with siblings, i
 
 ### `wrapBlockByKey/Path`
 
-`wrapBlockByKey(key: String, properties: Object) => Editor` <br/>
+`wrapBlockByKey(key: String, properties: Object) => Editor`&#x20;
+
 `wrapBlockByKey(key: String, type: String) => Editor`
-`wrapBlockByPath(path: List, properties: Object) => Editor` <br/>
+`wrapBlockByPath(path: List, properties: Object) => Editor`&#x20;
+
 `wrapBlockByPath(path: List, type: String) => Editor`
 
-Wrap the given node in a [`Block`](./block.md) node that match `properties`. For convenience, you can pass a `type` string or `properties` object.
+Wrap the given node in a [**Block**](./block.md) node that match `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `wrapInlineByKey/Path`
 
-`wrapInlineByKey(key: String, properties: Object) => Editor` <br/>
+`wrapInlineByKey(key: String, properties: Object) => Editor`&#x20;
+
 `wrapInlineByKey(key: String, type: String) => Editor`
-`wrapInlineByPath(path: List, properties: Object) => Editor` <br/>
+`wrapInlineByPath(path: List, properties: Object) => Editor`&#x20;
+
 `wrapInlineByPath(path: List, type: String) => Editor`
 
-Wrap the given node in a [`Inline`](./inline.md) node that match `properties`. For convenience, you can pass a `type` string or `properties` object.
+Wrap the given node in a [**Inline**](./inline.md) node that match `properties`. For convenience, you can pass a `type` string or `properties` object.
 
 ### `wrapNodeByKey/Path`
 
-`wrapNodeByKey(key: String, parent: Node) => Editor` <br/>
-`wrapNodeByPath(path: List, parent: Node) => Editor` <br/>
+`wrapNodeByKey(key: String, parent: Node) => Editor`&#x20;
 
-Wrap the node with the specified key with the parent [`Node`](./node.md). This will clear all children of the parent.
+`wrapNodeByPath(path: List, parent: Node) => Editor`&#x20;
+
+
+Wrap the node with the specified key with the parent [**Node**](./node.md). This will clear all children of the parent.
 
 ## History Commands
 
@@ -571,9 +619,13 @@ Snapshot `value.selection` for `undo` purposes, useful with delete operations li
 
 `normalize() => Editor`
 
-This method normalizes the document with the value's schema. This should run automatically-you should not need to call this method unless you have manually disabled normalization (and you should rarely, if ever, need to manually disable normalization). The vast majority of changes, whether by the user or invoked programmatically, will run `normalize` by default to ensure the document is always in adherence to its schema.
+This method normalizes the document with the value's schema. This should run automatically-you should not need to call this method unless you have manually disabled normalization (and you should rarely, if ever, need to manually disable normalization).&#x20;
 
-> 🤖 If you must use this method, use it sparingly and strategically. Calling this method can be very expensive as it will run normalization on all of the nodes in your document.
+The vast majority of changes, whether by the user or invoked programmatically, will run `normalize` by default to ensure the document is always in adherence to its schema.
+
+:::BlockQuote
+🤖 If you must use this method, use it sparingly and strategically. Calling this method can be very expensive as it will run normalization on all of the nodes in your document.
+:::
 
 ### `withoutNormalizing`
 
@@ -595,7 +647,11 @@ editor.withoutNormalizing(() => {
 
 `withoutSaving(fn: Function) => Editor`
 
-By default all new operations are saved to the editor's history. If you have changes that you don't want to show up in the history when the user presses <kbd>cmd+z</kbd>, you can use `withoutSaving` to skip those changes.
+By default all new operations are saved to the editor's history. If you have changes that you don't want to show up in the history when the user presses cmd+z, you can use `withoutSaving` to skip those changes.
+
+:::Iframe{code="<kbd>"}
+
+:::
 
 ```js
 editor.withoutSaving(() => {
