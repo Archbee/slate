@@ -1,0 +1,270 @@
+{
+  "docsPath": "docs/",
+  "structure": {
+    "readme": "Introduction.md",
+    "summary": "Summary.md",
+    "assets": ".gitbook/assets",
+    "docsTree": [
+      {
+        "categoryName": "Table of contents",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Introduction",
+            "isCategory": false,
+            "path": "Table of contents/archbee-doc-2LOSfUeifwus9N1mp1z3i.mdx",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Walkthroughs",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Installing Slate",
+            "isCategory": false,
+            "path": "Walkthroughs/archbee-doc-F_wxmcpXXcFXBnlTLKotn.mdx",
+            "children": []
+          },
+          {
+            "categoryName": "Adding Event Handlers",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Defining Custom Elements",
+            "isCategory": false,
+            "path": "Walkthroughs/archbee-doc-l5v_fYYYnHrwDlyHaXAXk.mdx",
+            "children": []
+          },
+          {
+            "categoryName": "Applying Custom Formatting",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Executing Commands",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Saving to a Database",
+            "isCategory": false,
+            "path": "Walkthroughs/archbee-doc-Suu73rxKAwcxyuTwxwmYD.mdx",
+            "children": []
+          },
+          {
+            "categoryName": "Using the Bundled Source",
+            "isCategory": false,
+            "path": "Walkthroughs/archbee-doc-o9oX-ED5R9sJY9YsVYR-B.mdx",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Concepts",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Interfaces",
+            "isCategory": false,
+            "path": "Concepts/archbee-doc-exyXV6J_ffA0bpFGo8Amb.mdx",
+            "children": []
+          },
+          {
+            "categoryName": "Nodes",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Locations",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Transforms",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Operations",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Commands",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Editor",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Plugins",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Rendering",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Serializing",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Normalizing",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "TypeScript",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Migrating",
+            "isCategory": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "API",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Transforms",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Node Types",
+            "isCategory": false,
+            "children": [
+              {
+                "categoryName": "Editor",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "Element",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "Node",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "Text",
+                "isCategory": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "categoryName": "Location Types",
+            "isCategory": false,
+            "children": [
+              {
+                "categoryName": "Location",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "Path",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "Point",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "PointRef",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "Range",
+                "isCategory": false,
+                "children": []
+              },
+              {
+                "categoryName": "RangeRef",
+                "isCategory": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "categoryName": "Operation",
+            "isCategory": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Libraries",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Slate React",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Slate History",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Slate Hyperscript",
+            "isCategory": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "General",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Resources",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Contributing",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "Changelog",
+            "isCategory": false,
+            "children": []
+          },
+          {
+            "categoryName": "FAQ",
+            "isCategory": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Shadow Docs",
+        "isCategory": true,
+        "children": [],
+        "isShadowDocs": true
+      }
+    ]
+  }
+}
