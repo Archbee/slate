@@ -1,4 +1,9 @@
-# Installing Slate
+---
+title: Installing Slate
+docTags: 
+createdAt: Tue May 05 2026 15:31:37 GMT+0000 (Coordinated Universal Time)
+updatedAt: Tue May 05 2026 15:31:37 GMT+0000 (Coordinated Universal Time)
+---
 
 Slate is a monorepo divided up into multiple npm packages, so to install it you do:
 
@@ -12,7 +17,7 @@ You'll also need to be sure to install Slate's peer dependencies:
 yarn add react react-dom
 ```
 
-_Note, if you'd rather use a pre-bundled version of Slate, you can `yarn add slate` and retrieve the bundled `dist/slate.js` file! Check out the_ [_Using the Bundled Source_](xx-using-the-bundled-source.md) _guide for more information._
+*Note, if you'd rather use a pre-bundled version of Slate, you can&#x20;*`yarn add slate`*&#x20;and retrieve the bundled&#x20;*`dist/slate.js`*&#x20;file! Check out the* [Using the Bundled Source](xx-using-the-bundled-source.md) *guide for more information.*
 
 Once you've installed Slate, you'll need to import it.
 
@@ -47,7 +52,9 @@ const App = () => {
 
 Of course we haven't rendered anything, so you won't see any changes.
 
-> If you are using TypeScript, you will also need to extend the `Editor` with `ReactEditor` and add annotations as per the documentation on [TypeScript](../concepts/12-typescript.md). The example below also includes the custom types required for the rest of this example.
+:::BlockQuote
+If you are using TypeScript, you will also need to extend the `Editor` with `ReactEditor` and add annotations as per the documentation on [TypeScript](../concepts/12-typescript.md). The example below also includes the custom types required for the rest of this example.
+:::
 
 ```typescript
 // TypeScript users only add this code
@@ -82,7 +89,9 @@ const App = () => {
 
 You can think of the `<Slate>` component as providing a context to every component underneath it.
 
-> Slate Provider's "value" prop is only used as initial state for editor.children. If your code relies on replacing editor.children you should do so by replacing it directly instead of relying on the "value" prop to do this for you. See [Slate PR 4540](https://github.com/ianstormtaylor/slate/pull/4540) for a more in-depth discussion.
+:::BlockQuote
+Slate Provider's "value" prop is only used as initial state for editor.children. If your code relies on replacing editor.children you should do so by replacing it directly instead of relying on the "value" prop to do this for you. See [Slate PR 4540](https://github.com/ianstormtaylor/slate/pull/4540) for a more in-depth discussion.
+:::
 
 This is a slightly different mental model than things like `<input>` or `<textarea>`, because richtext documents are more complex. You'll often want to include toolbars, or live previews, or other complex components next to your editable content.
 
