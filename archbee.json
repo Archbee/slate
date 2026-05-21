@@ -1,0 +1,324 @@
+{
+  "docsPath": "docs/",
+  "structure": {
+    "readme": "Introduction.md",
+    "summary": "Summary.md",
+    "assets": ".gitbook/assets",
+    "docsTree": [
+      {
+        "categoryName": "Table of contents",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Introduction",
+            "isCategory": false,
+            "path": "Introduction.md",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Walkthroughs",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Installing Slate",
+            "isCategory": false,
+            "path": "walkthroughs/01-installing-slate.md",
+            "children": []
+          },
+          {
+            "categoryName": "Adding Event Handlers",
+            "isCategory": false,
+            "path": "walkthroughs/02-adding-event-handlers.md",
+            "children": []
+          },
+          {
+            "categoryName": "Defining Custom Elements",
+            "isCategory": false,
+            "path": "walkthroughs/03-defining-custom-elements.md",
+            "children": []
+          },
+          {
+            "categoryName": "Applying Custom Formatting",
+            "isCategory": false,
+            "path": "walkthroughs/04-applying-custom-formatting.md",
+            "children": []
+          },
+          {
+            "categoryName": "Executing Commands",
+            "isCategory": false,
+            "path": "walkthroughs/05-executing-commands.md",
+            "children": []
+          },
+          {
+            "categoryName": "Saving to a Database",
+            "isCategory": false,
+            "path": "walkthroughs/06-saving-to-a-database.md",
+            "children": []
+          },
+          {
+            "categoryName": "Using the Bundled Source",
+            "isCategory": false,
+            "path": "walkthroughs/xx-using-the-bundled-source.md",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Concepts",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Interfaces",
+            "isCategory": false,
+            "path": "concepts/01-interfaces.md",
+            "children": []
+          },
+          {
+            "categoryName": "Nodes",
+            "isCategory": false,
+            "path": "concepts/02-nodes.md",
+            "children": []
+          },
+          {
+            "categoryName": "Locations",
+            "isCategory": false,
+            "path": "concepts/03-locations.md",
+            "children": []
+          },
+          {
+            "categoryName": "Transforms",
+            "isCategory": false,
+            "path": "concepts/04-transforms.md",
+            "children": []
+          },
+          {
+            "categoryName": "Operations",
+            "isCategory": false,
+            "path": "concepts/05-operations.md",
+            "children": []
+          },
+          {
+            "categoryName": "Commands",
+            "isCategory": false,
+            "path": "concepts/06-commands.md",
+            "children": []
+          },
+          {
+            "categoryName": "Editor",
+            "isCategory": false,
+            "path": "concepts/07-editor.md",
+            "children": []
+          },
+          {
+            "categoryName": "Plugins",
+            "isCategory": false,
+            "path": "concepts/08-plugins.md",
+            "children": []
+          },
+          {
+            "categoryName": "Rendering",
+            "isCategory": false,
+            "path": "concepts/09-rendering.md",
+            "children": []
+          },
+          {
+            "categoryName": "Serializing",
+            "isCategory": false,
+            "path": "concepts/10-serializing.md",
+            "children": []
+          },
+          {
+            "categoryName": "Normalizing",
+            "isCategory": false,
+            "path": "concepts/11-normalizing.md",
+            "children": []
+          },
+          {
+            "categoryName": "TypeScript",
+            "isCategory": false,
+            "path": "concepts/12-typescript.md",
+            "children": []
+          },
+          {
+            "categoryName": "Migrating",
+            "isCategory": false,
+            "path": "concepts/xx-migrating.md",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "API",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Transforms",
+            "isCategory": false,
+            "path": "api/transforms.md",
+            "children": []
+          },
+          {
+            "categoryName": "Node Types",
+            "isCategory": false,
+            "path": "api/nodes/README.md",
+            "children": [
+              {
+                "categoryName": "Editor",
+                "isCategory": false,
+                "path": "api/nodes/editor.md",
+                "children": []
+              },
+              {
+                "categoryName": "Element",
+                "isCategory": false,
+                "path": "api/nodes/element.md",
+                "children": []
+              },
+              {
+                "categoryName": "Node",
+                "isCategory": false,
+                "path": "api/nodes/node.md",
+                "children": []
+              },
+              {
+                "categoryName": "NodeEntry",
+                "isCategory": false,
+                "path": "api/nodes/node-entry.md",
+                "children": []
+              },
+              {
+                "categoryName": "Text",
+                "isCategory": false,
+                "path": "api/nodes/text.md",
+                "children": []
+              }
+            ]
+          },
+          {
+            "categoryName": "Location Types",
+            "isCategory": false,
+            "path": "api/locations/README.md",
+            "children": [
+              {
+                "categoryName": "Location",
+                "isCategory": false,
+                "path": "api/locations/location.md",
+                "children": []
+              },
+              {
+                "categoryName": "Path",
+                "isCategory": false,
+                "path": "api/locations/path.md",
+                "children": []
+              },
+              {
+                "categoryName": "PathRef",
+                "isCategory": false,
+                "path": "api/locations/path-ref.md",
+                "children": []
+              },
+              {
+                "categoryName": "Point",
+                "isCategory": false,
+                "path": "api/locations/point.md",
+                "children": []
+              },
+              {
+                "categoryName": "PointEntry",
+                "isCategory": false,
+                "path": "api/locations/point-entry.md",
+                "children": []
+              },
+              {
+                "categoryName": "PointRef",
+                "isCategory": false,
+                "path": "api/locations/point-ref.md",
+                "children": []
+              },
+              {
+                "categoryName": "Range",
+                "isCategory": false,
+                "path": "api/locations/range.md",
+                "children": []
+              },
+              {
+                "categoryName": "RangeRef",
+                "isCategory": false,
+                "path": "api/locations/range-ref.md",
+                "children": []
+              },
+              {
+                "categoryName": "Span",
+                "isCategory": false,
+                "path": "api/locations/span.md",
+                "children": []
+              }
+            ]
+          },
+          {
+            "categoryName": "Operation",
+            "isCategory": false,
+            "path": "api/operation.md",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "Libraries",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Slate React",
+            "isCategory": false,
+            "path": "libraries/slate-react.md",
+            "children": []
+          },
+          {
+            "categoryName": "Slate History",
+            "isCategory": false,
+            "path": "libraries/slate-history.md",
+            "children": []
+          },
+          {
+            "categoryName": "Slate Hyperscript",
+            "isCategory": false,
+            "path": "libraries/slate-hyperscript.md",
+            "children": []
+          }
+        ]
+      },
+      {
+        "categoryName": "General",
+        "isCategory": true,
+        "children": [
+          {
+            "categoryName": "Resources",
+            "isCategory": false,
+            "path": "general/resources.md",
+            "children": []
+          },
+          {
+            "categoryName": "Contributing",
+            "isCategory": false,
+            "path": "general/contributing.md",
+            "children": []
+          },
+          {
+            "categoryName": "Changelog",
+            "isCategory": false,
+            "path": "general/changelog.md",
+            "children": []
+          },
+          {
+            "categoryName": "FAQ",
+            "isCategory": false,
+            "path": "general/faq.md",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
